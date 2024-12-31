@@ -1,0 +1,162 @@
+:root {
+  --clr-primary-400: hsl(158, 36%, 37%);
+  --clr-primary-200: hsl(30, 38%, 92%);
+  --clr-neutral-900: hsl(212, 21%, 14%);
+  --clr-neutral-400: hsl(228, 12%, 48%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+
+  --ff-title: "Fraunces", serif;
+  --ff-body: "Montserrat", serif;
+  --fw-medium: 500;
+  --fw-bold: 700;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+body {
+  background-color: var(--clr-primary-200);
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.product {
+  background-color: var(--clr-neutral-100);
+  display: grid;
+  width: 90%;
+  margin: 2rem auto;
+  border-radius: 10px;
+  max-width: 600px;
+  overflow: hidden;
+}
+
+.product__content {
+  padding: 1.5rem;
+  font-family: var(--ff-body);
+  display: grid;
+  gap: 1rem;
+}
+
+.product__class {
+  font-weight: var(--fw-medium);
+  color: var(--clr-neutral-400);
+  text-transform: uppercase;
+  font-size: 14px;
+  /* margin-bottom: 0.5rem; */
+}
+
+.product__name {
+  font-family: var(--ff-title);
+  color: var(--clr-neutral-900);
+  font-weight: var(--fw-bold);
+  line-height: 1;
+  /* margin-bottom: 1rem; */
+}
+
+.product__desc {
+  color: var(--clr-neutral-400);
+  font-size: 14px;
+  font-weight: var(--fw-medium);
+  /* margin-bottom: 1rem; */
+}
+
+.product__price__container {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  /* margin-bottom: 0.5rem; */
+}
+
+.product__price {
+  color: var(--clr-primary-400);
+  font-family: var(--ff-title);
+  font-weight: var(--fw-bold);
+}
+
+.product__original_price {
+  color: var(--clr-neutral-400);
+  font-weight: var(--fw-medium);
+  font-size: 14px;
+  text-decoration: line-through;
+}
+
+.atc__btn {
+  width: 100%;
+  background-color: var(--clr-primary-400);
+  display: flex;
+  gap: 0.75rem;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 0;
+}
+
+.atc__link {
+  text-decoration: none;
+  color: var(--clr-neutral-100);
+  font-weight: var(--fw-bold);
+  font-size: 14px;
+}
+
+@media (width>=600px) {
+  .product {
+    grid-template-columns: 50% 50%;
+  }
+
+  .product_content {
+    padding: 2rem;
+  }
+}
