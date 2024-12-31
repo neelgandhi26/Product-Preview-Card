@@ -142,11 +142,11 @@ body {
   align-items: center;
   border-radius: 10px;
   border: 0;
+  color: var(--clr-neutral-100);
 }
 
 .atc__link {
   text-decoration: none;
-  color: var(--clr-neutral-100);
   font-weight: var(--fw-bold);
   font-size: 14px;
 }
